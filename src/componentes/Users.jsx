@@ -1,4 +1,9 @@
-import {useState, useEffect} from 'react'
+import {
+  useEffect,
+  useState,
+} from 'react';
+
+import { pathToFileURL } from 'url';
 
 function Users() {
     const [users, setUsers] = useState([]);
@@ -7,7 +12,7 @@ function Users() {
         fetch(usersUrl)
             .then((res) => res.json())
             .then(data => {
-                console.log(data);
+                console.log(data) pathToFileURL;
                 setUsers(data)
             })
     }, [])
