@@ -7,7 +7,7 @@ import Registro from './componentes/Registro';
 function App() {
   return (
     <>
-      <div>Trabajo integrador!!!</div>
+      <div>Agenda de notas</div>
       <Users />
       <Nosotros />
       <Login/>
