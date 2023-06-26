@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react'
+import { useState, useEffect } from 'react'
 
 function Users() {
     const [users, setUsers] = useState([]);
@@ -12,22 +12,22 @@ function Users() {
             })
     }, [])
 
-  return (
-    <div className='container-lg w-3/4 grid gap-4 grid-cols-4 mx-auto'>
-        {
-            users.map((user, i) =>{
-                return(
-                    <div key={i} className='bg-slate-200 p-4 rounded-md'>
-                        <img src={user.avatar} alt="" className='mx-auto rounded-full'/>
-                        <h3 className='text-center'>{user.name}</h3>
-                        {/* <p className='text-sm'>{user.email}</p> */}
-                        
-                    </div>
-                )
-            })
-        }
-    </div>
-  )
+    return (
+        <div className='container-lg w-3/4 grid gap-4 grid-cols-4 mx-auto'>
+            {
+                users.map((user, i) => {
+                    return (
+                        <div key={i} className='bg-slate-200 p-4 rounded-md'>
+                            <img src={user.avatar} alt="" className='mx-auto rounded-full' />
+                            <h3 className='text-center'>{user.name}</h3>
+                            {/* <p className='text-sm'>{user.email}</p> */}
+
+                        </div>
+                    )
+                })
+            }
+        </div>
+    )
 }
 
 export default Users
