@@ -6,7 +6,7 @@ function Login() {
 
   const fetchUsers = async (url) => {
     try {
-      const response = await fetch(url);
+      const response = await fetch(url);np
       const data = await response.json();
       setUsers(data);
     } catch (error) {
