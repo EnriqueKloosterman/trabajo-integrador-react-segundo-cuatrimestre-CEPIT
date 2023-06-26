@@ -1,8 +1,8 @@
-import React from 'react';
+
 
 function Nosotros() {
- return (
-    
+  return (
+
     <div>
       <h2>Nosotros</h2>
       <p>Somos un grupo de estudiantes desarrollando esta aplicación web como parte de nuestro proyecto de aprendizaje. Este equipo esta conformado por Enrique, Florencia, Malvina Y Viviana</p>

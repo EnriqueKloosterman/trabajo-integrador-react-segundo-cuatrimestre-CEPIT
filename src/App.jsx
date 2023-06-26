@@ -1,3 +1,4 @@
+import Nosotros from './componentes/Nosotros';
 import Users from './componentes/Users';
 
 function App() {
@@ -5,6 +6,7 @@ function App() {
     <>
       <div>Trabajo integrador!!!</div>
       <Users />
+      <Nosotros />
     </>
   )
 }
