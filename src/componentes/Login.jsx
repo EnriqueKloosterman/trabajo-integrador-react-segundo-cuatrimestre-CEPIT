@@ -1,5 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react';
-import Header from './Header';
+import {
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 
 function Login() {
   const initialUrl = 'https://647bdcaec0bae2880ad048d1.mockapi.io/users';
@@ -44,7 +47,7 @@ function Login() {
 
   return (
     <>
-      <Header />
+      
       <h2>Login</h2>
       <form onSubmit={handleSubmit}>
         <label htmlFor="nombre">Nombre</label>
