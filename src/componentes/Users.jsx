@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 
 function Users() {
     const [users, setUsers] = useState([]);
-    const usersUrl = 'https://647bdcaec0bae2880ad048d1.mockapi.io/users';
+    const usersUrl = 'https://647bdcaec0bae2880ad048d1.mockapi.io/users'
     useEffect(() => {
         fetch(usersUrl)
             .then((res) => res.json())
