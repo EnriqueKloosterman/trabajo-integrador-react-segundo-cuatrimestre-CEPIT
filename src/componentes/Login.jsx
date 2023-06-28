@@ -47,19 +47,28 @@ function Login() {
 
   return (
     <>
-      
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="email">Email</label>
-        <input type="email" name="email" id="email" />
+      <div className='container-lg mx-auto'>
+        <h2 className='text-center text-4xl font-bold '>Login</h2>
+        <div className='w-2/4 bg-slate-300 mx-auto mt-10 p-5 rounded-lg'>
+          <form onSubmit={handleSubmit}>
+            <div className='w-5/6 mx-auto my-4'>
+              <label htmlFor="text">Email</label>
+              <input type="email" name="email" id="email" className='w-full rounded-md mt-2 p-1'/>
+            </div>
+            <div className='w-5/6 mx-auto my-4'>
+              <label htmlFor="password">Contraseña</label>
+              <input type="password" name="password" id="password"className='w-full rounded-md mt-2 p-1' />
+            </div>
 
-        <label htmlFor="password">Contraseña</label>
-        <input type="password" name="password" id="password" />
-
-        <p id="notificacion" ref={notificacionRef}></p>
-
-        <button type="submit">Enviar</button>
-      </form>
+            <div className='flex justify-end'>
+              <button type="submit"  className='bg-indigo-400 text-xs rounded-sm font-bold p-1 text-white mt-3'>Enviar</button>
+            </div>
+          </form>
+          <div className='w-5/6 mx-auto my-4'>
+              <p id="notificacion" ref={notificacionRef} className='text-center text-xs text-red-600'></p>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
