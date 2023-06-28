@@ -3,6 +3,7 @@ import {
   useRef,
   useState,
 } from 'react';
+import logoYoutube from '../assets/youtube-logo-youtube-icon-transparent-free-png.webp'
 
 function Login() {
   const initialUrl = 'https://647bdcaec0bae2880ad048d1.mockapi.io/users';
@@ -28,7 +29,7 @@ function Login() {
     e.preventDefault();
 
     let loginUser = {
-      email: e.target.nombre.value,
+      email: e.target.email.value,
       password: e.target.password.value,
     };
 
@@ -39,7 +40,7 @@ function Login() {
       notificacionRef.current.innerHTML = 'Usuario Logueado';
     } else {
       notificacionRef.current.style.color = 'red';
-      notificacionRef.current.innerHTML = 'Datos Incorrectos';
+      notificacionRef.current.innerHTML = 'Credenciales incorrectas';
     }
 
     e.target.reset();
@@ -47,22 +48,24 @@ function Login() {
 
   return (
     <>
+                  <a href="https://www.youtube.com"><img src={logoYoutube} alt="123" /></a>
       <div className='container-lg mx-auto'>
         <h2 className='text-center text-4xl font-bold '>Login</h2>
         <div className='w-2/4 bg-slate-300 mx-auto mt-10 p-5 rounded-lg'>
           <form onSubmit={handleSubmit}>
             <div className='w-5/6 mx-auto my-4'>
               <label htmlFor="text">Email</label>
-              <input type="email" name="email" id="email" className='w-full rounded-md mt-2 p-1'/>
+              <input type="email" name="email" id="email" className='w-full rounded-md mt-2 p-1 border focus:outline-none focus:border-indigo-400 focus:border-2
+              '/>
             </div>
             <div className='w-5/6 mx-auto my-4'>
               <label htmlFor="password">Contraseña</label>
-              <input type="password" name="password" id="password"className='w-full rounded-md mt-2 p-1' />
+              <input type="password" name="password" id="password"className='w-full rounded-md mt-2 p-1 focus:outline-none focus:border-indigo-400 focus:border-2' />
+            </div>
+            <div className='flex justify-end'>
+              <button type="submit"  className='bg-indigo-400 text-md rounded-md font-bold px-2 py-1 text-white mt-3'>Enviar</button>
             </div>
 
-            <div className='flex justify-end'>
-              <button type="submit"  className='bg-indigo-400 text-xs rounded-sm font-bold p-1 text-white mt-3'>Enviar</button>
-            </div>
           </form>
           <div className='w-5/6 mx-auto my-4'>
               <p id="notificacion" ref={notificacionRef} className='text-center text-xs text-red-600'></p>
