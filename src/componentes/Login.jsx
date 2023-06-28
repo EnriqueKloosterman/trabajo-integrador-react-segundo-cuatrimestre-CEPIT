@@ -28,11 +28,11 @@ function Login() {
     e.preventDefault();
 
     let loginUser = {
-      name: e.target.nombre.value,
+      email: e.target.nombre.value,
       password: e.target.password.value,
     };
 
-    let userFound = users.find((user) => user.name === loginUser.name);
+    let userFound = users.find((user) => user.email === loginUser.email);
 
     if (userFound && userFound.password === loginUser.password) {
       notificacionRef.current.style.color = 'green';
@@ -50,8 +50,8 @@ function Login() {
       
       <h2>Login</h2>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="nombre">Nombre</label>
-        <input type="text" name="nombre" id="nombre" />
+        <label htmlFor="email">Email</label>
+        <input type="email" name="email" id="email" />
 
         <label htmlFor="password">Contraseña</label>
         <input type="password" name="password" id="password" />

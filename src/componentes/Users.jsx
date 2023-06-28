@@ -20,7 +20,7 @@ function Users() {
                         <div key={i} className='bg-slate-200 p-4 rounded-md'>
                             <img src={user.avatar} alt="" className='mx-auto rounded-full' />
                             <h3 className='text-center'>{user.name}</h3>
-                            {/* <p className='text-sm'>{user.email}</p> */}
+                            <p className='text-sm text-center'>{user.email}</p>
 
                         </div>
                     )

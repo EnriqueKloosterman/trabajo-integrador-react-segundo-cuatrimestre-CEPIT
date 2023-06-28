@@ -1,5 +1,5 @@
-import { Route, Routes } from 'react-router-dom';
 // import Header from './componentes/Header';
+import { Route, Routes } from 'react-router-dom';
 import Nosotros from './componentes/Nosotros';
 import Users from './componentes/Users';
 import Login from './componentes/Login';
@@ -13,7 +13,7 @@ function App() {
         <Route exact path='/' element={<Login />} />
         <Route exact path='/nosotros' element={<Nosotros />} />
         <Route exact path='/register' element={<Registro />} />
-        <Route exact path='/Users' element={<Users />} />
+        <Route exact path='/users' element={<Users />} />
       </Routes>
     </>
   )
