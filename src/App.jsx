@@ -4,7 +4,7 @@ import Nosotros from './componentes/Nosotros';
 import Users from './componentes/Users';
 import Login from './componentes/Login';
 import Registro from './componentes/Registro';
-
+import Contacto from './componentes/Contacto';
 
 function App() {
   return (
@@ -14,6 +14,7 @@ function App() {
         <Route exact path='/nosotros' element={<Nosotros />} />
         <Route exact path='/register' element={<Registro />} />
         <Route exact path='/users' element={<Users />} />
+        <Route exact path='/contacto' element={<Contacto />} />
       </Routes>
     </>
   )
