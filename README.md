@@ -26,7 +26,7 @@ Luego, configuramos y personalizamos Tailwind CSS siguiendo su documentación of
 3. Inicializar el proyecto con Vite y React:
 Ejecutamos el siguiente comando en nuestra línea de comandos:
 
-npx create-react-app nombre-del-proyecto
+npm create vite@latest . --template react
 
 Esto nos creará una estructura de proyecto básica con React. Y 
 
@@ -70,3 +70,6 @@ Repositorio del proyecto:
 - Informe: Incluimos un informe con la descripción del proyecto, objetivos y conclusiones.
 - Código: El código desarrollado se encuentra en nuestro repositorio de Git (https://github.com/EnriqueKloosterman/trabajo-integrador-react-segundo-cuatrimestre-CEPIT).
 - README: Proporcionamos un archivo README con una descripción concisa del proyecto y instrucciones detalladas para su instalación, ejecución y uso. metas gestionar el tiempo de manera efectiva.
+
+Para ejecutar el codigo: 
+- npm run dev
