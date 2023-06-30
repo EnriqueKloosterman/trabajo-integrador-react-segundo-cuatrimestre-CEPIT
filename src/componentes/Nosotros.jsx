@@ -1,4 +1,4 @@
-
+import Header from './Header';
 
 function Nosotros() {
   return (

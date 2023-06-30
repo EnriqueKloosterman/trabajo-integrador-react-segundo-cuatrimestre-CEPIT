@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaInstagramSquare, FaYoutube, FaFacebookSquare, FaLinkedin } from 'react-icons/fa';
+import Header from './Header';
 
 const Contacto = () => {
   const redirectToURL = (url) => {
