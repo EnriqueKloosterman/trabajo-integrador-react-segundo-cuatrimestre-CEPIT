@@ -1,6 +1,5 @@
 import React from 'react';
 import { FaInstagramSquare, FaYoutube, FaFacebookSquare, FaLinkedin } from 'react-icons/fa';
-import Header from './Header';
 
 const Contacto = () => {
   const redirectToURL = (url) => {
@@ -23,7 +22,7 @@ const Contacto = () => {
       url: 'https://www.linkedin.com/in/florencia-da-rosa-a6823a272/',
       photo: 'https://media.licdn.com/dms/image/D4D03AQHvp17n4XdDug/profile-displayphoto-shrink_200_200/0/1683844037443?e=1693440000&v=beta&t=4VSVbdxFH5_CfewMq-ZYbquYXiBCySTyyyys0dNpXrk'
     },
-    // Add more LinkedIn profiles with URLs and photos here
+  
   ];
 
   return (
