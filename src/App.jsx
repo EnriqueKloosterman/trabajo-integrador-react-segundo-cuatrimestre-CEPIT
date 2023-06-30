@@ -1,4 +1,3 @@
-// import Header from './componentes/Header';
 import { Route, Routes } from 'react-router-dom';
 import Nosotros from './componentes/Nosotros';
 import Users from './componentes/Users';
