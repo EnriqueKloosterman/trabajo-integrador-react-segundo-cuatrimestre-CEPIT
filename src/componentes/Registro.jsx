@@ -1,4 +1,4 @@
-import React from 'react';
+
 import Header from './Header';
 
 function Registro() {
@@ -39,15 +39,15 @@ function Registro() {
         <form onSubmit={sendUser} className="w-full bg-gray-300 rounded-md my-4 p-4">
           <div className="flex flex-col ml-6">
             <label htmlFor="nombre" className="w-full">Nombre</label>
-            <input type="text" name="nombre" id="nombre" className="w-5/6 rounded-md" />
+            <input type="text" name="nombre" id="nombre" className="w-5/6 rounded-md border focus:outline-none focus:border-indigo-400" />
           </div>
           <div className="flex flex-col ml-6">
             <label htmlFor="email" className="w-full">Email</label>
-            <input type="email" name="email" id="email" className="w-5/6 rounded-md" />
+            <input type="email" name="email" id="email" className="w-5/6 rounded-md border focus:outline-none focus:border-indigo-400" />
           </div>
           <div className="flex flex-col ml-6">
             <label htmlFor="password" className="w-full">Contraseña</label>
-            <input type="password" name="password" id="password" className="w-5/6 rounded-md" />
+            <input type="password" name="password" id="password" className="w-5/6 rounded-md border focus:outline-none focus:border-indigo-400" />
           </div>
           <div className="flex justify-end">
             <button type="submit" className="bg-indigo-400 text-xs rounded-sm font-bold p-1 text-white mt-3">Registrarse</button>
