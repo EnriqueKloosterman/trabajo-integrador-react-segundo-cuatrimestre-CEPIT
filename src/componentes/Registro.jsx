@@ -19,14 +19,16 @@ function Registro() {
       const data = await response.json();
       console.log(data);
     } catch (error) {
-      postError.innerText = error;
+      console.error(error)
     }
   }
 
   function sendUser(e) {
     e.preventDefault();
     let newUser = {
-      name: e.target[0].value,
+      name: e.target.nombre.value,
+      email: e.target.email.value,
+      password: e.target.password.value,
     }
     addOne(newUser)
   }

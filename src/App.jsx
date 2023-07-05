@@ -5,21 +5,22 @@ import Login from './componentes/Login';
 import Registro from './componentes/Registro';
 import Contacto from './componentes/Contacto';
 import List from './componentes/List';
+import { UserProvider} from './UserContext'
 
 
 
 function App() {
   return (
-    <>
+    <UserProvider>
       <Routes>
         <Route exact path='/' element={<Login />} />
         <Route exact path='/nosotros' element={<Nosotros />} />
         <Route exact path='/register' element={<Registro />} />
         <Route exact path='/users' element={<Users />} />
         <Route exact path='/contacto' element={<Contacto />} />
-        <Route exact path='list' element={<List />} />
+        <Route exact path='/list' element={<List />} />
       </Routes>
-    </>
+    </UserProvider>
   )
 }
 
