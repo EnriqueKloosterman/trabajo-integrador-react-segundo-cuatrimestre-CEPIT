@@ -31,6 +31,7 @@ function Registro() {
       password: e.target.password.value,
     }
     addOne(newUser)
+    e.target.reset()
   }
 
   return (
