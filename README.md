@@ -18,27 +18,22 @@ Sigue estos pasos para instalar y ejecutar la App de Notas en tu entorno local:
 Clona el repositorio del proyecto desde GitHub:
 
 bash
-Copy code
+
 git clone https://github.com/EnriqueKloosterman/trabajo-integrador-react-segundo-cuatrimestre-CEPIT.git
 Navega al directorio del proyecto:
 
 bash
-Copy code
+
 cd app-de-notas
 Instala las dependencias necesarias:
 
-Copy code
+
 npm install
 Inicia la aplicación:
 
-sql
-Copy code
-npm start
-Accede a la aplicación en tu navegador web:
+correr aplicacíon:
+npm run dev
 
-arduino
-Copy code
-http://localhost:3000
 
 ## Metas y beneficios
 La App de Notas tiene como meta principal ayudarte a gestionar tus tareas de manera efectiva. Al utilizar la aplicación, podrás:
