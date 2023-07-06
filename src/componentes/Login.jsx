@@ -56,12 +56,12 @@ function Login() {
             {user ? (
               <div>
                 <h2 className='font-bold text-center text-xl'>Bienvenido {user.name}</h2>
-                <button className='p-1 rounded-md bg-cyan-200' onClick={handleLogOut}>Cerrar sesión</button>
+                <button className='p-1 rounded-md bg-cyan-100' onClick={handleLogOut}>Cerrar sesión</button>
               </div>
             ) : (
               <div>
                 <h2 className='text-center text-4xl font-bold '>Login</h2>
-                <div className='w-2/4 bg-slate-300 mx-auto mt-10 p-5 rounded-lg'>
+                <div className='w-2/4 bg-slate-300/40 mx-auto mt-10 p-5 rounded-lg'>
                   <form onSubmit={handleSubmit}>
                     <div className='w-5/6 mx-auto my-4'>
                       <label htmlFor="name">Email</label>

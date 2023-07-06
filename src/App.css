@@ -1,0 +1,9 @@
+body{
+    width: 100%;
+    height: 100vh;
+    overflow: scroll;
+
+    background-image: url("./assets/bg-1.jpg");
+    background-position: center;
+    background-size: cover;
+}

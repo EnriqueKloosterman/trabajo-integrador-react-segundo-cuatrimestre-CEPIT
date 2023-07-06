@@ -6,6 +6,7 @@ import Registro from './componentes/Registro';
 import Contacto from './componentes/Contacto';
 import List from './componentes/List';
 import { UserProvider} from './UserContext'
+import './App.css'
 
 
 
