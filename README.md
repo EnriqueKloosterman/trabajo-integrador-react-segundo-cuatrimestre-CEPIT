@@ -1,7 +1,7 @@
-##App de Notas
+## App de Notas
 La App de Notas es una aplicación diseñada para ayudarte a gestionar tus tareas de manera eficiente. Proporciona una interfaz intuitiva y fácil de usar que te permite crear, editar, eliminar y visualizar notas de manera organizada.
 
-#Funcionalidades
+# Funcionalidades
 La aplicación de notas te permite:
 
 Crear nuevas notas: Escribe y guarda notas con información relevante, como tareas pendientes, recordatorios o cualquier otra información que desees almacenar.
@@ -12,7 +12,7 @@ Eliminar notas: Si una nota ya no es relevante o deseas eliminarla, la aplicaci�
 
 Visualizar notas: Accede a todas tus notas almacenadas y visualízalas de manera organizada para revisar y recordar la información que has registrado previamente.
 
-#Instalación
+# Instalación
 Sigue estos pasos para instalar y ejecutar la aplicación de notas en tu entorno local:
 
 Clona el repositorio del proyecto desde GitHub:
@@ -49,4 +49,4 @@ React Router DOM: Librería de enrutamiento utilizada para gestionar la navegaci
 Tailwind CSS: Biblioteca de CSS que facilita el diseño y la estilización de la aplicación.
 
 
-#¡Esperamos que disfrutes utilizando la App de Notas y que te ayude a gestionar tus tareas de manera efectiva!
+# ¡Esperamos que disfrutes utilizando la App de Notas y que te ayude a gestionar tus tareas de manera efectiva!
