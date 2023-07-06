@@ -48,4 +48,4 @@ React Router DOM: Librería de enrutamiento utilizada para gestionar la navegaci
 
 Tailwind CSS: Biblioteca de CSS que facilita el diseño y la estilización de la aplicación.
 
-## ¡Esperamos que disfrutes utilizando la App de Notas y que te ayude a gestionar tus tareas de manera efectiva!
+### ¡Esperamos que disfrutes utilizando la App de Notas y que te ayude a gestionar tus tareas de manera efectiva!
