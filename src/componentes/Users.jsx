@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import Header from './Header';
 
 function Users() {
     const [users, setUsers] = useState([]);
@@ -13,6 +14,8 @@ function Users() {
     }, [])
 
     return (
+        <>
+            <Header />
         <div className='container-lg w-3/4 grid gap-4 grid-cols-4 mx-auto'>
             {
                 users.map((user, i) => {
@@ -27,6 +30,7 @@ function Users() {
                 })
             }
         </div>
+        </>
     )
 }
 

@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from "react";
+import { FaRegTrashAlt, FaEdit } from 'react-icons/fa';
+import Header from "./Header";
 const task = {
     note: "",
     id: ""
@@ -78,45 +80,71 @@ function List() {
         modal.current.close();
     }
 
+    //? boton de tarea comletada
+    // const [isClicked, setIsClicked] = useState(false);
+    const toggleCompleted = (id) => {
+        setNotes((prevNotes) =>
+            prevNotes.map((note) => {
+                if (note.id === id) {
+                    return {
+                        ...note,
+                        isClicked: !note.isClicked
+                    };
+                }
+                return note;
+            })
+        );
+    };
+
     return (
         <>
+            <Header />
             <div className="container-lg w-5/6 mx-auto">
                 <h2 className="text-center text-3xl font-bold">Listado de tareas</h2>
-                <form
-                    onSubmit={(e) => createNote(e)}
-                    className="flex flex-col mt-10 gap-4"
-                >
-                    <input
-                        type="text"
-                        placeholder="Escribe tu nota"
-                        name="note"
-                        id="note"
-                        className="border border-black p-2 rounded-md"
-                    />
-                    <button className="border border-black p-2 rounded-md">
-                        Crear nota
-                    </button>
-                </form>
-                <div className="flex  flex-col mt-10 gap-4 ">
+                <div className="flex justify-start mb-3">
+
+                    <form
+                        onSubmit={(e) => createNote(e)}
+                        className="w-full"
+                    >
+                        <input
+                            type="text"
+                            placeholder="Escribe tu nota"
+                            name="note"
+                            id="note"
+                            className=" p-2 rounded-l-md w-3/4 border focus:outline-none focus:border-indigo-400"
+                        />
+                        <button className=" p-2 rounded-r-md bg-indigo-400 text-white font-bold">
+                            Crear nota
+                        </button>
+                    </form>
+                </div>
+                <div className="flex  flex-col gap-2 bg-slate-200/80 p-10 rounded-md ">
                     {notes.map((note) => {
                         return (
-                            <div className=" bg-slate-100 p-2 rounded-md block" key={note.id}>
-                                <p className="font-bold text-lg text-left">
+                            <div className=" bg-slate-100/80 p-2 rounded-md flex justify-between" key={note.id}>
+
+                                <p className="font-bold text-lg text-left font-mono">
                                     {note.note}
+                                </p>
+                                <div className="flex justify-end">
                                     <button
-                                        className="border border-black rounded-md mx-2 p-1"
+                                        className=" mx-1 p-1 text-red-600"
                                         onClick={() => deleteNote(note.id)}
                                     >
-                                        ❌
+                                        <FaRegTrashAlt />
                                     </button>
                                     <button
-                                        className="border border-black rounded-md mx-2 p-1"
+                                        className=" mx-2 p-1 text-indigo-400"
                                         id="editar"
                                         onClick={() => selectNote(note)}
                                     >
-                                        Editar✏
+                                        <FaEdit />
                                     </button>
-                                </p>
+                                    <button onClick={() => toggleCompleted(note.id)}>
+                                        {note.isClicked ? '✔' : '❌'}
+                                    </button>
+                                </div>
                             </div>
                         );
                     })}
@@ -126,8 +154,8 @@ function List() {
                     <form action="">
 
                         <label htmlFor="note">Nota:</label><br />
-                        <input type="text" name="note" value={currentNote.note} className="border-2 border-indigo-300 rounded-md p-1" onChange={(e) => setCurrentNote(prev => ({ ...prev, note: e.target.value }))} />
-                        <button className="rounded-md bg-indigo-300 p-1 font-bold text-white mt-4 " onClick={(e) => updateNote(e, currentNote.id)}>Editar</button>
+                        <input type="text" name="note" value={currentNote.note} className="border-2 border-indigo-300 rounded-l-md p-1 w-4/6" onChange={(e) => setCurrentNote(prev => ({ ...prev, note: e.target.value }))} />
+                        <button className="rounded-r-md border-2 border-indigo-300 bg-indigo-300 p-1 font-bold text-white mt-4 " onClick={(e) => updateNote(e, currentNote.id)}>Editar</button>
                     </form>
                 </dialog>
             </div>

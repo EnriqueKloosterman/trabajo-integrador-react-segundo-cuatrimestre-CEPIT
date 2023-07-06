@@ -40,7 +40,6 @@ function Login() {
 
     if (user) {
       handleLogin(user);
-      setError('Usuario logueado correctamente');
     } else {
       setError('Email o password incorrectos');
     }
@@ -54,9 +53,10 @@ function Login() {
         <div className='w-full'>
           <div>
             {user ? (
-              <div>
+              <div className='flex flex-col justify-center items-center w-1/6 bg-slate-300/40 p-5 mx-auto rounded-md'>
+                <img src={user.avatar} alt="imagen" className='rounded-full' />
                 <h2 className='font-bold text-center text-xl'>Bienvenido {user.name}</h2>
-                <button className='p-1 rounded-md bg-cyan-100' onClick={handleLogOut}>Cerrar sesión</button>
+                <button className='p-1 rounded-md bg-indigo-400 text-white font-bold' onClick={handleLogOut}>Cerrar sesión</button>
               </div>
             ) : (
               <div>

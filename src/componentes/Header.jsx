@@ -8,7 +8,7 @@ function Header() {
         <nav>
           <ul className="navUl">
             <li>
-              <Link to="/" className="navLink">
+              <Link to="/list" className="navLink">
                 Inicio
               </Link>
             </li>
@@ -26,7 +26,7 @@ function Header() {
         </nav>
       </header>
 
-      <style jsx>{`
+      <style >{`
         .navUl {
           display: flex;
           justify-content: center;
