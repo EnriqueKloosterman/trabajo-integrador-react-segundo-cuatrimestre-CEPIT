@@ -24,7 +24,7 @@ Navega al directorio del proyecto:
 
 bash
 
-cd app-de-notas
+´´cd app-de-notas
 Instala las dependencias necesarias:
 
 
