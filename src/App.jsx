@@ -8,6 +8,7 @@ import Contacto from './componentes/Contacto';
 import List from './componentes/List';
 import { UserProvider } from './UserContext';
 import './App.css';
+import ProtectedRoute from './auth/ProtectedRoute';
 
 function App() {
   return (
@@ -17,7 +18,9 @@ function App() {
         <Route path="/nosotros" element={<Nosotros />} />
         <Route path="/register" element={<Registro />} />
         <Route path="/contacto" element={<Contacto />} />
+        <Route element={<ProtectedRoute/>}>
         <Route path="/list" element={<List />} />
+        </Route>
         <Route path="/users" element={<Users />} />
         <Route path="*" element={<h2>Not Found</h2>} />
       </Routes>
@@ -26,3 +29,6 @@ function App() {
 }
 
 export default App;
+
+
+
