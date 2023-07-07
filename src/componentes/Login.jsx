@@ -60,7 +60,7 @@ function Login() {
               </div>
             ) : (
               <div>
-                <h2 className='text-center text-4xl font-bold '>Login</h2>
+              
                 <div className='w-2/4 bg-slate-300/40 mx-auto mt-10 p-5 rounded-lg'>
                   <form onSubmit={handleSubmit}>
                     <div className='w-5/6 mx-auto my-4'>
