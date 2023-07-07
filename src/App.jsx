@@ -18,6 +18,7 @@ function App() {
         <Route path="/register" element={<Registro />} />
         <Route path="/contacto" element={<Contacto />} />
         <Route path="/list" element={<List />} />
+        <Route path="/users" element={<Users />} />
         <Route path="*" element={<h2>Not Found</h2>} />
       </Routes>
     </UserProvider>
