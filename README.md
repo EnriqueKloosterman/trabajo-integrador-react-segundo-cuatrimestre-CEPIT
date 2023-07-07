@@ -1,6 +1,6 @@
 # App de Notas
 
-La App de Notas es una aplicación diseñada para gestionar tus tareas de manera eficiente. Permite crear, editar, eliminar y visualizar notas de manera organizada.
+La App de Notas es una aplicación diseñada para gestionar tus tareas de manera eficiente. 
 
 ## Funcionalidades
 
