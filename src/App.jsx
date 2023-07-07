@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Nosotros from './componentes/Nosotros';
 import Users from './componentes/Users';
@@ -17,23 +17,25 @@ function App() {
         <Route path="/" element={<Login />} />
         <Route path="/nosotros" element={<Nosotros />} />
         <Route path="/register" element={<Registro />} />
-        <Route path="/users" element={<PrivateRoute component={Users} />} />
+        {/* <Route path="/list" element={<PrivateRoute component={List} />} /> */}
+        <Route path="/users" element={<Users />} />
         <Route path="/contacto" element={<Contacto />} />
-        <Route path="/list" element={<PrivateRoute component={List} />} />
+        {/* <Route path="/list" element={<PrivateRoute component={List} />} /> */}
+        <Route path="/list" element={<List  />} />
         <Route path="*" element={<h2>Not Found </h2>} />
       </Routes>
     </UserProvider>
   );
 }
 
-function PrivateRoute({ component: Component, ...rest }) {
-  const isUserAuthenticated = true; 
-  return (
-    <Route
-      {...rest}
-      element={isUserAuthenticated ? <Component /> : <Navigate to="/register" />}
-    />
-  );
-}
+// function PrivateRoute({ component: Component, ...rest }) {
+//   const isUserAuthenticated = true; 
+//   return (
+//     <Route
+//       {...rest}
+//       element={isUserAuthenticated ? <Component /> : <Navigate to="/register" />}
+//     />
+//   );
+// }
 
 export default App;
