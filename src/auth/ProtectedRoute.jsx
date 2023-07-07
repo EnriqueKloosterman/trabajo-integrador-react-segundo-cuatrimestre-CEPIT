@@ -17,7 +17,7 @@ function useAuth(){
 function ProtectedRoute(){
   let user = useAuth()
   if(!user) {
-    return <Navigate to="/registro" />
+    return <Navigate to="/" />
   } else{
     return <Outlet/>
   }

@@ -13,7 +13,7 @@ const PrivateRoute = ({ component: Component, user, list, ... rest }) => {
         user ? (
           <Component {...props} />
         ) : (
-          <Navigate to="/register" />
+          <Navigate to="/" />
         )
       }
     />
