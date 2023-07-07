@@ -13,7 +13,7 @@ const Contacto = () => {
   const linkedinProfiles = [
     {
       url: 'https://www.linkedin.com/in/enrique-kloosterman-9090aa1b5/',
-      photo: 'https://media.licdn.com/dms/image/D4E35AQEpRZYHgR9a7w/profile-framedphoto-shrink_200_200/0/1649168456156?e=1688688000&v=beta&t=nG3EfwmtdcsHA8_BqRy3BdDkjLl_Ux-BXcmQVfHnDRw'
+      photo: 'https://media.licdn.com/dms/image/D4E35AQEpRZYHgR9a7w/profile-framedphoto-shrink_200_200/0/1649168456156?e=1689354000&v=beta&t=yf0M1N3fYHyRI7L6x6dWXUaae1eBLYu5UtiWbLDr3Y0'
     },
     {
       url: 'https://www.linkedin.com/in/malvina-pacheco-376a59190/',
