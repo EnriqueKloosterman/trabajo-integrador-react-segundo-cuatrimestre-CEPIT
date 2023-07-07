@@ -4,7 +4,7 @@ import Header from './Header';
 
 const Contacto = () => {
   const redirectToURL = (url) => {
-    window.location.href = url;
+    window.open(url, '_blank');
   };
 
   const contactEmail = 'contacto@example.com';

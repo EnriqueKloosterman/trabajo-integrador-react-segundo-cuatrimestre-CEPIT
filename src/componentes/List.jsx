@@ -5,11 +5,14 @@ const task = {
     note: "",
     id: ""
 }
+/**
+ * 
+ * @returns 
+ */
 function List() {
     const notesUrl = "https://649dcc459bac4a8e669e54c4.mockapi.io/notes";
     const [notes, setNotes] = useState([]);
     const modal = useRef()
-
     useEffect(() => {
         fetch(notesUrl)
             .then((res) => res.json())
@@ -43,7 +46,7 @@ function List() {
 
     //? funcion para eliminar una nota a partir de su id
     const deleteNote = (id) => {
-        fetch(notesUrl + "/" + id, {
+        fetch(`${notesUrl}/${id}`, {
             method: "DELETE",
         })
             .then((res) => res.json())
@@ -81,20 +84,27 @@ function List() {
     }
 
     //? boton de tarea comletada
-    // const [isClicked, setIsClicked] = useState(false);
     const toggleCompleted = (id) => {
-        setNotes((prevNotes) =>
-            prevNotes.map((note) => {
-                if (note.id === id) {
-                    return {
-                        ...note,
-                        isClicked: !note.isClicked
-                    };
-                }
-                return note;
+        const noteToUpdate = notes.find((note) => note.id === id);
+        noteToUpdate.isClicked = !noteToUpdate.isClicked;
+        fetch(`${notesUrl}/${id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(noteToUpdate),
+        })
+            .then((response) => response.json())
+            .then((updatedNote) => {
+                setNotes((prevNotes) =>
+                    prevNotes.map((note) => (note.id === id ? updatedNote : note))
+                );
             })
-        );
+            .catch((error) => {
+                console.error('Error al actualizar la nota:', error);
+            });
     };
+
 
     return (
         <>
