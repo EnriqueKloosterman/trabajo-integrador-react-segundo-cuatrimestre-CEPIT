@@ -1,12 +1,5 @@
-import React, { useState } from 'react';
-
-import {
-  FaFacebookSquare,
-  FaInstagramSquare,
-  FaLinkedin,
-  FaYoutube,
-} from 'react-icons/fa';
-
+import  { useState } from 'react';
+import { FaInstagramSquare, FaYoutube, FaFacebookSquare, FaLinkedin } from 'react-icons/fa';
 import Header from './Header';
 
 const Contacto = () => {
