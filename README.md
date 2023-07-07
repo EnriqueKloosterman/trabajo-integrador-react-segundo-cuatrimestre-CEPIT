@@ -29,7 +29,8 @@ correr aplicacíon:
 La App de Notas tiene como meta principal ayudarte a gestionar tus tareas
 de manera efectiva. Al utilizar la aplicación, podrás mantener un registro
 organizado de tus tareas pendientes, editar y eliminar notas de forma rápida,
-y visualizar tus notas de manera ordenada para optimizar tu tiempo y aumentar tu productividad.
+y visualizar tus notas de manera ordenada para optimizar tu tiempo y aumentar
+tu productividad.
 
 ¡Disfruta utilizando la App de Notas y mejora tu gestión de tareas!
 
