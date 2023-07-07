@@ -1,4 +1,4 @@
-
+import React, { useState } from 'react';
 import { FaInstagramSquare, FaYoutube, FaFacebookSquare, FaLinkedin } from 'react-icons/fa';
 import Header from './Header';
 
@@ -23,8 +23,25 @@ const Contacto = () => {
       url: 'https://www.linkedin.com/in/florencia-da-rosa-a6823a272/',
       photo: 'https://media.licdn.com/dms/image/D4D03AQHvp17n4XdDug/profile-displayphoto-shrink_200_200/0/1683844037443?e=1693440000&v=beta&t=4VSVbdxFH5_CfewMq-ZYbquYXiBCySTyyyys0dNpXrk'
     },
-  
   ];
+
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    console.log('Form Data:', formData);
+  };
+
+  const handleInputChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
 
   return (
     <div>
@@ -65,12 +82,24 @@ const Contacto = () => {
         <p style={{ fontSize: '20px' }}><strong>Email:</strong> {contactEmail}</p>
         <p style={{ fontSize: '20px' }}><strong>Teléfono:</strong> {contactPhoneNumber}</p>
       </div>
+      <h3 style={{ fontSize: '20px', fontWeight: 'bold', marginTop: '40px' }}>Formulario de Contacto</h3>
+      <form onSubmit={handleFormSubmit} style={{ marginTop: '20px' }}>
+        <div style={{ marginBottom: '10px' }}>
+          <label htmlFor="name" style={{ display: 'block', marginBottom: '5px', fontWeight: 'bold' }}>Nombre:</label>
+          <input type="text" id="name" name="name" onChange={handleInputChange} value={formData.name} style={{ width: '100%', padding: '5px' }} />
+        </div>
+        <div style={{ marginBottom: '10px' }}>
+          <label htmlFor="email" style={{ display: 'block', marginBottom: '5px', fontWeight: 'bold' }}>Email:</label>
+          <input type="email" id="email" name="email" onChange={handleInputChange} value={formData.email} style={{ width: '100%', padding: '5px' }} />
+        </div>
+        <div style={{ marginBottom: '10px' }}>
+          <label htmlFor="message" style={{ display: 'block', marginBottom: '5px', fontWeight: 'bold' }}>Mensaje:</label>
+          <textarea id="message" name="message" onChange={handleInputChange} value={formData.message} style={{ width: '100%', padding: '5px' }} />
+        </div>
+        <button type="submit" style={{ padding: '10px 20px', background: '#007bff', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>Enviar</button>
+      </form>
     </div>
   );
 };
 
 export default Contacto;
-
-
-
-
