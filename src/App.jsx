@@ -21,7 +21,9 @@ function App() {
         <Route element={<ProtectedRoute/>}>
         <Route path="/list" element={<List />} />
         </Route>
+        <Route element={<ProtectedRoute/>}>
         <Route path="/users" element={<Users />} />
+        </Route>
         <Route path="*" element={<h2>Not Found</h2>} />
       </Routes>
     </UserProvider>

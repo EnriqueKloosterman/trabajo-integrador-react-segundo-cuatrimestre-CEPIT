@@ -5,7 +5,7 @@ import {
   Route,
 } from 'react-router-dom';
 
-const PrivateRoute = ({ component: Component, user,  list ... rest }) => {
+const PrivateRoute = ({ component: Component, user, list, ... rest }) => {
   return (
     <Route
       {...rest}
