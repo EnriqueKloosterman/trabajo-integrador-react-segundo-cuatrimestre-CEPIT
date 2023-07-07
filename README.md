@@ -21,9 +21,10 @@ Instala las dependencias necesarias:
    ```
  
 correr aplicacíon:
-   ```
+ ```
    npm run dev
-    
+   ```
+ 
 
 ## Metas y beneficios
 La App de Notas tiene como meta principal ayudarte a gestionar tus tareas
