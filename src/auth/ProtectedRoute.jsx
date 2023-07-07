@@ -1,4 +1,7 @@
-import { Outlet, Navigate } from "react-router-dom";
+import {
+  Navigate,
+  Outlet,
+} from 'react-router-dom';
 
 //funcion que verifica si usuario esta loggeado
 function useAuth(){
@@ -8,7 +11,7 @@ function useAuth(){
   } else {
     return false
   }
-};
+}
  
 //Componente
 function ProtectedRoute(){
@@ -18,6 +21,6 @@ function ProtectedRoute(){
   } else{
     return <Outlet/>
   }
-};
+}
 
 export default ProtectedRoute;
