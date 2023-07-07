@@ -1,6 +1,7 @@
+import React from 'react';
 import { Route, Navigate } from 'react-router-dom';
 
-const PrivateRoute = ({ component: Component, user, ...rest }) => {
+const PrivateRoute = ({ component: Component, user, List }) => {
   return (
     <Route
       {...rest}
@@ -8,7 +9,7 @@ const PrivateRoute = ({ component: Component, user, ...rest }) => {
         user ? (
           <Component {...props} />
         ) : (
-          <Navigate to="/" replace state={{ from: props.location }} />
+          <Navigate to= '/registro' />
         )
       }
     />
