@@ -7,6 +7,10 @@ La App de Notas es una aplicación diseñada para gestionar tus tareas de manera
 - Crear, editar y eliminar notas con información relevante, como tareas pendientes y recordatorios.
 - Visualizar todas las notas de forma ordenada para revisar la información almacenada.
 
+## Requisitos previos
+- Tener instalado Node.js en el entorno de desarrollo.
+- Acceso a un backend de prueba para obtener datos de ítems y almacenar credenciales de usuarios registrados.
+
 ## Instalación y ejecución
 
 Para instalar y ejecutar la App de Notas en tu entorno local, sigue estos pasos:
@@ -25,13 +29,3 @@ correr aplicacíon:
    npm run dev
    ```
  
-
-## Metas y beneficios
-La App de Notas tiene como meta principal ayudarte a gestionar tus tareas
-de manera efectiva. Al utilizar la aplicación, podrás mantener un registro
-organizado de tus tareas pendientes, editar y eliminar notas de forma rápida,
-y visualizar tus notas de manera ordenada para optimizar tu tiempo y aumentar
-tu productividad.
-
-¡Disfruta utilizando la App de Notas y mejora tu gestión de tareas!
-
