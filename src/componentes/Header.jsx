@@ -11,10 +11,10 @@ function Header() {
     <div className="w-3/4 bg-slate-400/50 p-3 my-3 mx-auto rounded-md ">
       <header>
         <nav className="">
-          <ul className='flex flex-row justify-around font-bold text-white'>
+          <ul className='flex flex-row justify-around font-bold text-sm md:text-base lg:text-lg text-white'>
             <li>
               <Link to="/list" className="navLink">
-                Inicio
+                Tareas
               </Link>
             </li>
             <li>

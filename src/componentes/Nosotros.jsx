@@ -1,3 +1,4 @@
+import Footer from './Footer';
 import Header from './Header';
 
 const Nosotros = () => {
@@ -10,6 +11,7 @@ const Nosotros = () => {
       <p>Nuestro objetivo es adquirir experiencia práctica en el desarrollo de aplicaciones web y mejorar nuestras habilidades en React.</p>
       <p>¡Estamos entusiasmados en compartir este proyecto con ustedes!</p>
     </div>
+    <Footer />
     </>
   );
 };

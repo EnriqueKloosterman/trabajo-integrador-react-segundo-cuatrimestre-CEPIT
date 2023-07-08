@@ -16,14 +16,14 @@ function Users() {
     return (
         <>
             <Header />
-        <div className='container-lg w-3/4 grid gap-4 grid-cols-4 mx-auto'>
+            <div className='container-lg w-3/4 grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 mx-auto'>
             {
                 users.map((user, i) => {
                     return (
-                        <div key={i} className='bg-slate-200 p-4 rounded-md'>
-                            <img src={user.avatar} alt="" className='mx-auto rounded-full' />
-                            <h3 className='text-center'>{user.name}</h3>
-                            <p className='text-sm text-center'>{user.email}</p>
+                        <div key={i} className='bg-slate-200/90 p-4 rounded-md'>
+                            <img src={user.avatar} alt={user.name} className='mx-auto rounded-full' />
+                            <h3 className='text-center font-bold italic'>{user.name}</h3>
+                            <p className='invisible lg:visible text-xs text-center '>{user.email}</p>
 
                         </div>
                     )

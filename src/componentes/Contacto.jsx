@@ -1,53 +1,39 @@
-import  { useState } from 'react';
-import { FaInstagramSquare, FaYoutube, FaFacebookSquare, FaLinkedin } from 'react-icons/fa';
-import Header from './Header';
+import { useState } from "react";
+import {
+  // FaInstagramSquare,
+  // FaYoutube,
+  // FaFacebookSquare,
+  // FaLinkedin,
+} from "react-icons/fa";
+import Header from "./Header";
+import Footer from "./Footer";
 
 const Contacto = () => {
-  const redirectToURL = (url) => {
-    window.open(url, '_blank');
-  };
 
-  const contactEmail = 'contacto@example.com';
-  const contactPhoneNumber = '+123456789';
-
-  const linkedinProfiles = [
-    {
-      url: 'https://www.linkedin.com/in/enrique-kloosterman-9090aa1b5/',
-      photo: 'https://media.licdn.com/dms/image/D4E35AQEpRZYHgR9a7w/profile-framedphoto-shrink_200_200/0/1649168456156?e=1689354000&v=beta&t=yf0M1N3fYHyRI7L6x6dWXUaae1eBLYu5UtiWbLDr3Y0'
-    },
-    {
-      url: 'https://www.linkedin.com/in/malvina-pacheco-376a59190/',
-      photo: 'https://media.licdn.com/dms/image/D4D03AQG1fQ2hcOfCRg/profile-displayphoto-shrink_200_200/0/1681255532685?e=1693440000&v=beta&t=U1sZCD3NAWIuAUwFZfZcAQpX833yZXD6Q18PbfZFzug'
-    },
-    {
-      url: 'https://www.linkedin.com/in/florencia-da-rosa-a6823a272/',
-      photo: 'https://media.licdn.com/dms/image/D4D03AQHvp17n4XdDug/profile-displayphoto-shrink_200_200/0/1683844037443?e=1693440000&v=beta&t=4VSVbdxFH5_CfewMq-ZYbquYXiBCySTyyyys0dNpXrk'
-    },
-  ];
 
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
+    name: "",
+    email: "",
+    message: "",
   });
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    console.log('Form Data:', formData);
+    console.log("Form Data:", formData);
   };
 
   const handleInputChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   return (
     <div>
       <Header />
-      <h2 style={{ fontSize: '24px', fontWeight: 'bold' }}>Contacto</h2>
-      <div>
+      {/* <h2 className='text-center font-bold text-2xl'>Contacto</h2> */}
+      {/* <div>
         <FaYoutube
           size={50}
           onClick={() => redirectToURL('https://www.youtube.com')}
@@ -67,37 +53,73 @@ const Contacto = () => {
           onClick={() => redirectToURL('https://www.instagram.com')}
           style={{ cursor: 'pointer' }}
         />
+      </div> */}
+
+      <div className="container mx-auto p-5">
+        {/* <div>
+          <p className="text-2xl">
+            <span className="font-bold">Email:</span> {contactEmail}
+          </p>
+          <p className="text-2xl">
+            <span className="font-bold">Teléfono:</span> {contactPhoneNumber}
+          </p>
+        </div> */}
+        <div className="bg-slate-200/50 rounded-md">
+          <h3 className="text-2xl font-bold mt-10 bg-slate-300/50 md: ml-5">
+            Formulario de Contacto
+          </h3>
+          <form onSubmit={handleFormSubmit}>
+            <div className="p-5 flex flex-col">
+              <label htmlFor="name" className="text-xl mb-2">
+                Nombre:
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                onChange={handleInputChange}
+                value={formData.name}
+                className="w-full p-2 rounded-md border focus:outline-none focus:border-indigo-400 focus:border-2"
+              />
+            </div>
+            <div className="p-5 flex flex-col">
+              <label htmlFor="email" className="text-xl mb-2">
+                Email:
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                onChange={handleInputChange}
+                value={formData.email}
+                className="w-full p-2 rounded-md border focus:outline-none focus:border-indigo-400 focus:border-2"
+              />
+            </div>
+            <div className="p-5 flex flex-col">
+              <label htmlFor="message" className="text-xl mb-2">
+                Mensaje:
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                onChange={handleInputChange}
+                value={formData.message}
+                className="w-full p-2 rounded-md border focus:outline-none focus:border-indigo-400 focus:border-2"
+              />
+            </div>
+            <div className="flex justify-end p-5 ">
+              <button
+                type="submit"
+                className="bg-indigo-400 text-md rounded-md font-bold px-2 py-1 text-white "
+              >
+                Enviar
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <Footer />
       </div>
-      {linkedinProfiles.map((profile, index) => (
-        <div key={index}>
-          <FaLinkedin
-            size={50}
-            onClick={() => redirectToURL(profile.url)}
-            style={{ cursor: 'pointer' }}
-          />
-          <img src={profile.photo} alt="LinkedIn Profile" style={{ width: '50px', marginLeft: '10px' }} />
-        </div>
-      ))}
-      <div>
-        <p style={{ fontSize: '20px' }}><strong>Email:</strong> {contactEmail}</p>
-        <p style={{ fontSize: '20px' }}><strong>Teléfono:</strong> {contactPhoneNumber}</p>
-      </div>
-      <h3 style={{ fontSize: '20px', fontWeight: 'bold', marginTop: '40px' }}>Formulario de Contacto</h3>
-      <form onSubmit={handleFormSubmit} style={{ marginTop: '20px' }}>
-        <div style={{ marginBottom: '10px' }}>
-          <label htmlFor="name" style={{ display: 'block', marginBottom: '5px', fontWeight: 'bold' }}>Nombre:</label>
-          <input type="text" id="name" name="name" onChange={handleInputChange} value={formData.name} style={{ width: '100%', padding: '5px' }} />
-        </div>
-        <div style={{ marginBottom: '10px' }}>
-          <label htmlFor="email" style={{ display: 'block', marginBottom: '5px', fontWeight: 'bold' }}>Email:</label>
-          <input type="email" id="email" name="email" onChange={handleInputChange} value={formData.email} style={{ width: '100%', padding: '5px' }} />
-        </div>
-        <div style={{ marginBottom: '10px' }}>
-          <label htmlFor="message" style={{ display: 'block', marginBottom: '5px', fontWeight: 'bold' }}>Mensaje:</label>
-          <textarea id="message" name="message" onChange={handleInputChange} value={formData.message} style={{ width: '100%', padding: '5px' }} />
-        </div>
-        <button type="submit" style={{ padding: '10px 20px', background: '#007bff', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>Enviar</button>
-      </form>
     </div>
   );
 };
