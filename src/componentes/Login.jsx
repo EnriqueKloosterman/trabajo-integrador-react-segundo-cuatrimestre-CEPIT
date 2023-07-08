@@ -1,9 +1,11 @@
 import { useEffect,  useState,  useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../UserContext.jsx'
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
   const initialUrl = 'https://647bdcaec0bae2880ad048d1.mockapi.io/users';
+  const Navigate = useNavigate();
 
   //* Estado global por medio de useContext
   const { user, handleLogin, handleLogOut } = useContext(UserContext);
@@ -44,6 +46,7 @@ function Login() {
       setError('Email o password incorrectos');
     }
     e.target.reset();
+    Navigate('/list');
   }
 
   return (
@@ -53,15 +56,17 @@ function Login() {
         <div className='w-full'>
           <div>
             {user ? (
-              <div className='flex flex-col justify-center items-center w-1/6 bg-slate-300/40 p-5 mx-auto rounded-md'>
+              <div className='flex flex-col justify-center items-center w-5/6 md:w-4/6 lg:w-3/6 bg-slate-300/40 p-5 mx-auto rounded-md gap-4'>
                 <img src={user.avatar} alt="imagen" className='rounded-full' />
                 <h2 className='font-bold text-center text-xl'>Bienvenido {user.name}</h2>
+                <h3 className='font-bold text-center text-xl'>{user.email}</h3>
+                <p className='text-center text-lg'>¿Alguna otra  <Link to="list"><span className='text-indigo-700'>tarea</span></Link> por realizar?</p>
                 <button className='p-1 rounded-md bg-indigo-400 text-white font-bold' onClick={handleLogOut}>Cerrar sesión</button>
               </div>
             ) : (
               <div>
               
-                <div className='w-2/4 bg-slate-300/40 mx-auto mt-10 p-5 rounded-lg'>
+                <div className='w-5/6 md:w-3/4 lg:w-2/4 bg-slate-300/50 mx-auto mt-10 p-5 rounded-lg'>
                   <form onSubmit={handleSubmit}>
                     <div className='w-5/6 mx-auto my-4'>
                       <label htmlFor="name">Email</label>

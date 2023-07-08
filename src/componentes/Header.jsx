@@ -1,12 +1,17 @@
 import { Link } from 'react-router-dom';
+import { FaUserLarge } from "react-icons/fa6";
+import { useNavigate  } from 'react-router-dom';
 
 function Header() {
+  const navigate = useNavigate()
+  const handleUser = () => {
+    navigate('/')
+  }
   return (
-    <div className="w-3/4 bg-slate-300 p-3 my-3 mx-auto">
-      <h2 className="text-white font-bold text-center"></h2>
+    <div className="w-3/4 bg-slate-400/50 p-3 my-3 mx-auto rounded-md ">
       <header>
-        <nav>
-          <ul className="navUl">
+        <nav className="">
+          <ul className='flex flex-row justify-around font-bold text-white'>
             <li>
               <Link to="/list" className="navLink">
                 Inicio
@@ -22,33 +27,12 @@ function Header() {
                 Contacto
               </Link>
             </li>
+            <li>
+              <button onClick={handleUser} className='text-indigo-400'><FaUserLarge /></button>
+            </li>
           </ul>
         </nav>
       </header>
-
-      <style >{`
-        .navUl {
-          display: flex;
-          justify-content: center;
-          list-style-type: none;
-          padding: 0;
-          margin: 0;
-        }
-
-        .navUl li {
-          margin-right: 10px;
-        }
-
-        .navLink {
-          color: #fff;
-          text-decoration: none;
-          font-weight: bold;
-        }
-
-        .navLink:hover {
-          text-decoration: underline;
-        }
-      `}</style>
     </div>
   );
 }

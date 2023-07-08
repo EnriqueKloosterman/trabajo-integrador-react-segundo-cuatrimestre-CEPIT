@@ -1,8 +1,9 @@
-
+import { useNavigate } from 'react-router-dom';
 import Header from './Header';
 
 function Registro() {
   const urlBase = "https://647bdcaec0bae2880ad048d1.mockapi.io/users";
+  const navigate = useNavigate();
 
   async function addOne(user) {
     try {
@@ -32,30 +33,34 @@ function Registro() {
     }
     addOne(newUser)
     e.target.reset()
+    navigate("/")
   }
 
   return (
     <>
       <Header />
-      <h2 className="text-center font-bold text-3xl">Registrar usuario</h2>
-      <div className="container w-3/4 md:w-2/4 lg:w-1/3 mx-auto flex justify-center">
-        <form onSubmit={sendUser} className="w-full bg-gray-300 rounded-md my-4 p-4">
-          <div className="flex flex-col ml-6">
+      <div className='container-lg h-screen flex flex-col justify-center items-center '>
+      <div className='w-5/6 md:w-3/4 lg:w-2/4 bg-slate-300/50 mx-auto mt-10 p-5 rounded-lg'>
+      <h2 className="text-center font-bold text-3xl bg-indigo-600/50 p-2 rounded-md text-white">Registrarse</h2>
+
+        <form onSubmit={sendUser} className="w-full">
+          <div className='w-5/6 mx-auto my-4'>
             <label htmlFor="nombre" className="w-full">Nombre</label>
-            <input type="text" name="nombre" id="nombre" className="w-5/6 rounded-md border focus:outline-none focus:border-indigo-400" />
+            <input type="text" name="nombre" id="nombre" className='w-full rounded-md mt-2 p-1 border focus:outline-none focus:border-indigo-400 focus:border-2' />
           </div>
-          <div className="flex flex-col ml-6">
+          <div className='w-5/6 mx-auto my-4'>
             <label htmlFor="email" className="w-full">Email</label>
-            <input type="email" name="email" id="email" className="w-5/6 rounded-md border focus:outline-none focus:border-indigo-400" />
+            <input type="email" name="email" id="email" className='w-full rounded-md mt-2 p-1 border focus:outline-none focus:border-indigo-400 focus:border-2' />
           </div>
-          <div className="flex flex-col ml-6">
+          <div className='w-5/6 mx-auto my-4'>
             <label htmlFor="password" className="w-full">Contraseña</label>
-            <input type="password" name="password" id="password" className="w-5/6 rounded-md border focus:outline-none focus:border-indigo-400" />
+            <input type="password" name="password" id="password" className='w-full rounded-md mt-2 p-1 border focus:outline-none focus:border-indigo-400 focus:border-2' />
           </div>
           <div className="flex justify-end">
-            <button type="submit" className="bg-indigo-400 text-xs rounded-sm font-bold p-1 text-white mt-3">Registrarse</button>
+            <button type="submit" className='bg-indigo-400 text-md rounded-md font-bold px-2 py-1 text-white mt-3'>Crear Usuario</button>
           </div>
         </form>
+      </div>
       </div>
     </>
   );

@@ -1,33 +1,20 @@
-import React from 'react';
+import Header from './Header';
 
 const Nosotros = () => {
   return (
-    <div style={containerStyle}>
-      <h2 style={titleStyle}>Nosotros</h2>
-      <p style={paragraphStyle}>Somos un grupo de estudiantes desarrollando esta aplicación web como parte de nuestro proyecto de aprendizaje. Este equipo está conformado por Enrique, Florencia y Malvina.</p>
-      <p style={paragraphStyle}>Nuestro objetivo es adquirir experiencia práctica en el desarrollo de aplicaciones web y mejorar nuestras habilidades en React.</p>
-      <p style={paragraphStyle}>¡Estamos entusiasmados en compartir este proyecto con ustedes!</p>
+    <>
+    <Header />
+    <div className='w-5/6 bg-white/50 text-center md:text-left text-sm md:text-lg lg:text-xl md:font-bold mx-auto p-5 rounded-md mt-[20%]'>
+      <h2>Nosotros</h2>
+      <p>Somos un grupo de estudiantes desarrollando esta aplicación web como parte de nuestro proyecto de aprendizaje. Este equipo está conformado por Enrique, Florencia y Malvina.</p>
+      <p>Nuestro objetivo es adquirir experiencia práctica en el desarrollo de aplicaciones web y mejorar nuestras habilidades en React.</p>
+      <p>¡Estamos entusiasmados en compartir este proyecto con ustedes!</p>
     </div>
+    </>
   );
 };
 
-const containerStyle = {
-  background: '#f7f7f7',
-  padding: '20px',
-  borderRadius: '8px',
-  boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-};
 
-const titleStyle = {
-  fontSize: '24px',
-  fontWeight: 'bold',
-  marginBottom: '10px',
-};
-
-const paragraphStyle = {
-  fontSize: '16px',
-  marginBottom: '10px',
-};
 
 export default Nosotros;
 
