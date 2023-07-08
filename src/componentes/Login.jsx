@@ -1,4 +1,4 @@
-import { useEffect,  useState,  useContext } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../UserContext.jsx'
 import { useNavigate } from 'react-router-dom';
@@ -39,7 +39,6 @@ function Login() {
       (usr) => usr.email === userName && usr.password === userPassword
     );
     console.log(user);
-
     if (user) {
       handleLogin(user);
     } else {
@@ -52,7 +51,6 @@ function Login() {
   return (
     <>
       <div className='container-lg h-screen flex justify-center items-center '>
-
         <div className='w-full'>
           <div>
             {user ? (
@@ -65,7 +63,6 @@ function Login() {
               </div>
             ) : (
               <div>
-              
                 <div className='w-5/6 md:w-3/4 lg:w-2/4 bg-slate-300/50 mx-auto mt-10 p-5 rounded-lg'>
                   <form onSubmit={handleSubmit}>
                     <div className='w-5/6 mx-auto my-4'>
@@ -85,13 +82,12 @@ function Login() {
                     </div>
                   </form>
                   <div className='w-5/6 mx-auto my-4'>
-                    <p id="notificacion"  className='text-center text-xs text-red-600'>{error}</p>
+                    <p id="notificacion" className='text-center text-xs text-red-600'>{error}</p>
                   </div>
                 </div>
               </div>
             )}
           </div>
-
         </div>
       </div>
     </>

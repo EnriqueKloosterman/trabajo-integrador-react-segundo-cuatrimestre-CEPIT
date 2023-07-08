@@ -5,10 +5,7 @@ const task = {
     note: "",
     id: ""
 }
-/**
- * 
- * @returns 
- */
+
 function List() {
     const notesUrl = "https://649dcc459bac4a8e669e54c4.mockapi.io/notes";
     const [notes, setNotes] = useState([]);
@@ -105,33 +102,31 @@ function List() {
             });
     };
 
-
     return (
         <>
             <Header />
             <div className="container-lg w-full md:w-4/6 mx-auto">
                 <h2 className="text-center text-3xl font-bold">Listado de tareas</h2>
                 <div className="flex justify-start mb-3">
-
                     <form
                         onSubmit={(e) => createNote(e)}
                         className="w-full"
                     >
-                    <div className="w-5/6 mx-auto md:w-full md:mx-0 ">
-                        <input
-                            type="text"
-                            placeholder="Escribe tu nota"
-                            name="note"
-                            id="note"
-                            className="p-2 rounded-l-md w-5/6 md:w-3/4 border focus:outline-none focus:border-indigo-400"
+                        <div className="w-5/6 mx-auto md:w-full md:mx-0 ">
+                            <input
+                                type="text"
+                                placeholder="Escribe tu nota"
+                                name="note"
+                                id="note"
+                                className="p-2 rounded-l-md w-5/6 md:w-3/4 border focus:outline-none focus:border-indigo-400"
                             />
-                        <button className=" p-2 rounded-r-md bg-indigo-400 text-white font-bold">
-                            +
-                        </button>
-                    </div>
+                            <button className=" p-2 rounded-r-md bg-indigo-400 text-white font-bold">
+                                +
+                            </button>
+                        </div>
                     </form>
                 </div>
-                <div className="flex  flex-col gap-2 bg-slate-200/80 p-10 rounded-md ">
+                <div className="flex flex-col gap-2 bg-slate-200/80 p-10 rounded-md ">
                     {notes.map((note) => {
                         return (
                             <div className=" bg-slate-100/80 p-2 rounded-md flex justify-between" key={note.id}>
