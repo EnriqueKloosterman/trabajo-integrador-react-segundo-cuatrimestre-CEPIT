@@ -26,7 +26,7 @@ const Contacto = () => {
   return (
     <div>
       <Header />
-      <div className="container mx-auto p-5">
+      <div className="container mx-auto p-5 flex flex-col justify-between">
         <div className="bg-slate-200/50 rounded-md">
           <h3 className="text-2xl font-bold mt-10 bg-slate-300/50 md: ml-5">
             Formulario de Contacto
