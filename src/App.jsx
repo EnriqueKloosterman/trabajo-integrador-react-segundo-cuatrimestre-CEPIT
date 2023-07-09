@@ -9,6 +9,7 @@ import List from './componentes/List';
 import { UserProvider } from './UserContext';
 import './App.css';
 import ProtectedRoute from './auth/ProtectedRoute';
+import NotFound from './componentes/NotFound';
 
 function App() {
     return (
@@ -24,7 +25,8 @@ function App() {
                 <Route element={<ProtectedRoute />}>
                     <Route path="/users" element={<Users />} />
                 </Route>
-                <Route path="*" element={<h2>Not Found</h2>} />
+                {/* <Route path="*" element={<h2>Not Found</h2>} /> */}
+                <Route path="*" element={<NotFound />}/>
             </Routes>
         </UserProvider>
     );
