@@ -55,7 +55,7 @@ function Login() {
           <div>
             {user ? (
               <div className='flex flex-col justify-center items-center w-5/6 md:w-4/6 lg:w-3/6 bg-slate-300/40 p-5 mx-auto rounded-md gap-4'>
-                <img src={user.avatar} alt="imagen" className='rounded-full' />
+                <img src={user.avatar} alt="imagen" className='rounded-full h-[100px] md:h-[150px] lg:h-[200px]' />
                 <h2 className='font-bold text-center text-xl'>Bienvenido {user.name}</h2>
                 <h3 className='font-bold text-center text-xl'>{user.email}</h3>
                 <p className='text-center text-lg'>¿Alguna otra  <Link to="list"><span className='text-indigo-700'>tarea</span></Link> por realizar?</p>

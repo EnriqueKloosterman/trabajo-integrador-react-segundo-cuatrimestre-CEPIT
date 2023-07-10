@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import Header from './Header';
 
 function Registro() {
@@ -29,6 +29,7 @@ function Registro() {
     let newUser = {
       name: e.target.nombre.value,
       email: e.target.email.value,
+      avatar: e.target.avatar.value,
       password: e.target.password.value,
     }
     addOne(newUser)
@@ -52,8 +53,15 @@ function Registro() {
               <input type="email" name="email" id="email" className='w-full rounded-md mt-2 p-1 border focus:outline-none focus:border-indigo-400 focus:border-2' />
             </div>
             <div className='w-5/6 mx-auto my-4'>
+              <label htmlFor="avatar" className="w-full">Avatar</label>
+              <input type="text" name="avatar" id="avatar" className='w-full rounded-md mt-2 p-1 border focus:outline-none focus:border-indigo-400 focus:border-2' />
+            </div>
+            <div className='w-5/6 mx-auto my-4'>
               <label htmlFor="password" className="w-full">Contraseña</label>
               <input type="password" name="password" id="password" className='w-full rounded-md mt-2 p-1 border focus:outline-none focus:border-indigo-400 focus:border-2' />
+            </div>
+            <div className='w-5/6 mx-auto mt-4 text-center'>
+                <p>Volver al <Link to="/"><span className='text-indigo-500'>Login</span></Link></p>
             </div>
             <div className="flex justify-end">
               <button type="submit" className='bg-indigo-400 text-md rounded-md font-bold px-2 py-1 text-white mt-3'>Crear Usuario</button>
