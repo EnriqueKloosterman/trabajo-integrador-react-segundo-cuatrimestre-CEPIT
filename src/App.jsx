@@ -25,7 +25,6 @@ function App() {
                 <Route element={<ProtectedRoute />}>
                     <Route path="/users" element={<Users />} />
                 </Route>
-                {/* <Route path="*" element={<h2>Not Found</h2>} /> */}
                 <Route path="*" element={<NotFound />}/>
             </Routes>
         </UserProvider>
