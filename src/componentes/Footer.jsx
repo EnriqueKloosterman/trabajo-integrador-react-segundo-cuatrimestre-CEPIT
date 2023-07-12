@@ -28,9 +28,9 @@ function Footer() {
         <footer className="container mx-auto p-5 grid grid-cols-3 bg-slate-400/50 rounded-md mt-5 ">
             {linkedinProfiles.map((profile, index) => (
                 <div key={index} className="p-5">
-                    <h4 className="text-center text-xs md:text-lg lg:text-2xl font-bold mb-2">
+                    <p className="text-center text-xs md:text-lg lg:text-2xl font-bold mb-2">
                         {profile.name}
-                    </h4>
+                    </p>
                     <img
                         src={profile.photo}
                         alt="LinkedIn Profile"

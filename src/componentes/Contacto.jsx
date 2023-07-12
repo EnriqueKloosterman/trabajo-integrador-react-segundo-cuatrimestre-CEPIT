@@ -28,12 +28,12 @@ const Contacto = () => {
       <Header />
       <div className="container mx-auto p-5 flex flex-col justify-between">
         <div className="bg-slate-200/50 rounded-md">
-          <h3 className="text-2xl font-bold mt-10 bg-slate-300/50 md: ml-5">
+          <h3 className="text-center text-2xl font-bold mt-10 bg-slate-300/50 md:mx-5 md:p-1">
             Formulario de Contacto
           </h3>
           <form onSubmit={handleFormSubmit}>
             <div className="p-5 flex flex-col">
-              <label htmlFor="name" className="text-xl mb-2">
+              <label htmlFor="name" className="text-sm md:text-lg lg:text-xl mb-2">
                 Nombre:
               </label>
               <input
@@ -46,7 +46,7 @@ const Contacto = () => {
               />
             </div>
             <div className="p-5 flex flex-col">
-              <label htmlFor="email" className="text-xl mb-2">
+              <label htmlFor="email" className="text-sm md:text-lg lg:text-xl mb-2">
                 Email:
               </label>
               <input
@@ -59,7 +59,7 @@ const Contacto = () => {
               />
             </div>
             <div className="p-5 flex flex-col">
-              <label htmlFor="message" className="text-xl mb-2">
+              <label htmlFor="message" className="text-sm md:text-lg lg:text-xl mb-2">
                 Mensaje:
               </label>
               <textarea
