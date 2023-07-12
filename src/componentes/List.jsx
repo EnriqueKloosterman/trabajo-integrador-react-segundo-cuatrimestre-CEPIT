@@ -159,8 +159,13 @@ function List() {
                     <button className="text-red-900 font-extrabold" onClick={closeModal}>X</button><br />
                     <form action="">
                         <label htmlFor="note">Nota:</label><br />
-                        <input type="text" name="note" value={currentNote.note} className="border-2 border-indigo-300 rounded-l-md p-1 w-4/6" onChange={(e) => setCurrentNote(prev => ({ ...prev, note: e.target.value }))} />
-                        <button className="rounded-r-md border-2 border-indigo-300 bg-indigo-300 p-1 font-bold text-white mt-4 " onClick={(e) => updateNote(e, currentNote.id)}>Editar</button>
+                        <input type="text" 
+                            name="note" 
+                            value={currentNote.note} 
+                            className="border-2 border-indigo-300 rounded-l-md p-1 w-4/6" 
+                            onChange={(e) => setCurrentNote(prev => ({ ...prev, note: e.target.value }))} />
+                        <button className="rounded-r-md border-2 border-indigo-300 bg-indigo-300 p-1 font-bold text-white mt-4 "
+                            onClick={(e) => updateNote(e, currentNote.id)}>Editar</button>
                     </form>
                 </dialog>
             </div>

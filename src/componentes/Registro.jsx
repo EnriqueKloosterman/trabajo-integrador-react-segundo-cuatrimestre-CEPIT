@@ -46,19 +46,31 @@ function Registro() {
           <form onSubmit={sendUser} className="w-full">
             <div className='w-5/6 mx-auto my-4'>
               <label htmlFor="nombre" className="w-full">Nombre</label>
-              <input type="text" name="nombre" id="nombre" className='w-full rounded-md mt-2 p-1 border focus:outline-none focus:border-indigo-400 focus:border-2' />
+              <input type="text" 
+                name="nombre" 
+                id="nombre" 
+                className='w-full rounded-md mt-2 p-1 border focus:outline-none focus:border-indigo-400 focus:border-2' />
             </div>
             <div className='w-5/6 mx-auto my-4'>
               <label htmlFor="email" className="w-full">Email</label>
-              <input type="email" name="email" id="email" className='w-full rounded-md mt-2 p-1 border focus:outline-none focus:border-indigo-400 focus:border-2' />
+              <input type="email" 
+                name="email" 
+                id="email" 
+                className='w-full rounded-md mt-2 p-1 border focus:outline-none focus:border-indigo-400 focus:border-2' />
             </div>
             <div className='w-5/6 mx-auto my-4'>
               <label htmlFor="avatar" className="w-full">Avatar</label>
-              <input type="text" name="avatar" id="avatar" className='w-full rounded-md mt-2 p-1 border focus:outline-none focus:border-indigo-400 focus:border-2' />
+              <input type="text" 
+                name="avatar" 
+                id="avatar" 
+                className='w-full rounded-md mt-2 p-1 border focus:outline-none focus:border-indigo-400 focus:border-2' />
             </div>
             <div className='w-5/6 mx-auto my-4'>
               <label htmlFor="password" className="w-full">Contraseña</label>
-              <input type="password" name="password" id="password" className='w-full rounded-md mt-2 p-1 border focus:outline-none focus:border-indigo-400 focus:border-2' />
+              <input type="password" 
+                name="password" 
+                id="password" 
+                className='w-full rounded-md mt-2 p-1 border focus:outline-none focus:border-indigo-400 focus:border-2' />
             </div>
             <div className='w-5/6 mx-auto mt-4 text-center'>
                 <p>Volver al <Link to="/"><span className='text-indigo-500'>Login</span></Link></p>

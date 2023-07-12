@@ -64,14 +64,25 @@ function Login() {
             ) : (
               <div>
                 <div className='w-5/6 md:w-3/4 lg:w-2/4 bg-slate-300/50 mx-auto mt-10 p-5 rounded-lg'>
+                <h2 className="text-center font-bold text-3xl bg-indigo-600/50 p-2 rounded-md text-white">Iniciar Sesión</h2>
                   <form onSubmit={handleSubmit}>
                     <div className='w-5/6 mx-auto my-4'>
                       <label htmlFor="name">Email</label>
-                      <input type="email" name="email" id="name" placeholder="e@mail.com" onChange={(e) => setUserName(e.target.value)} className='w-full rounded-md mt-2 p-1 border focus:outline-none focus:border-indigo-400 focus:border-2' />
+                      <input type="email" 
+                        name="email" 
+                        id="name"
+                        placeholder="e@mail.com" 
+                        onChange={(e) => setUserName(e.target.value)} 
+                        className='w-full rounded-md mt-2 p-1 border focus:outline-none focus:border-indigo-400 focus:border-2' />
                     </div>
                     <div className='w-5/6 mx-auto my-4'>
                       <label htmlFor="password">Contraseña</label>
-                      <input type="password" name="password" id="password" placeholder="password" onChange={(e) => setUserPassword(e.target.value)} className='w-full rounded-md mt-2 p-1 focus:outline-none focus:border-indigo-400 focus:border-2' />
+                      <input type="password" 
+                        name="password" 
+                        id="password" 
+                        placeholder="password" 
+                        onChange={(e) => setUserPassword(e.target.value)} 
+                        className='w-full rounded-md mt-2 p-1 focus:outline-none focus:border-indigo-400 focus:border-2' />
                     </div>
                     <div className='w-5/6 mx-auto mt-4 text-center'>
                       <p>¿No estas registrado?</p>
